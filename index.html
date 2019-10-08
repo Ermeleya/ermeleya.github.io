@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ермолаева. Веб-разработчик</title>
+    <link rel="icon" type="image/png" href="img/favicon.png" sizes="16x16">
+	<link rel="icon" type="image/png" href="img/favicon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="img/favicon.png" sizes="96x96">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">  
+        <link rel="stylesheet" href="css/slyle.css">        
+        <link rel="stylesheet" href="css/media.css">
+        <link rel="stylesheet" href="css/extraStyle.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap&subset=cyrillic" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.vide.min.js"></script>
+     <!-- Подключаем стили slick slider -->
+    <link rel="stylesheet" href="slick/slick.css">
+  <link rel="stylesheet" href="slick/slick-theme.css">
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+ <link rel="stylesheet" href="css/animate.css">
+ <!-- Анимация WOW  -->
+ <script src="js/wow.js"></script>
+ <link rel="stylesheet" href="css/animate.css">
+</head>
+<body>
+   <section class="main" data-vide-bg="video/Working-it.mp4">
+   
+   		<div class="row header">
+   			<div class="col-xl-4 offset-xl-0 col-lg-4 offset-lg-0 col-md-5 offset-md-0 col-sm-5 offset-sm-0 col-xs-8 offset-xs-2">
+   				<img class="main-avatar" src="img/avatar.png" alt="Аватар">
+   				<h3 class="main-logo">Ермолаева Елена. <br> Веб-разработчик</h3>
+   			</div>
+   			<div class="col-xl-4 offset-xl-4 col-lg-4 offset-lg-4 col-md-6 offset-md-1 col-sm-7 offset-sm-0 col-xs-12 offset-xs-0">
+          <div class="header-link__wrapper">
+          <a href="tel:+7 (968) 785 38 22"><img class="icon" src="img/icons/phone.png" alt="Телефон"> <p class="header-link">8(968)785-38-22</p></a>
+          <br>
+          <a href="mailto:ermolaeva-developer@gmail.com"><img class="icon" src="img/icons/email.png" alt="Email"> <p class="header-link">ermolaeva-developer@gmail.com</p></a>
+          </div>   			
+      </div>
+   		</div>
+   		
+   		<div class="row">
+   			<div class="col-xl-6 offset-xl-0 col-lg-6 offset-lg-0 col-md-6 offset-md-0 col-sm-6 offset-sm-3 col-xs-12 offset-xs-0">
+   				<div class="main-section__left-wrap">
+            <h1 class="main-title"><span>Разработка сайтов<span>
+            <span>для бизнеса<span></h1>
+            <p class="main-label"> Лендинги под ключ <br> от 10 000 руб</p> 
+            
+            <br>
+            
+            <p> <span class="main__label_bonus"> Панель администратора </span> <br> <span class="main__label_bonus_money">в подарок </span></p>
+          </div>
+   			</div>
+   			<div class="col-xl-4 offset-xl-2 col-lg-4 offset-lg-2 col-md-6 offset-md-0 col-sm-10 offset-sm-1 col-xs-12 offset-xs-0">
+   				<div class="main-section__right-wrap">
+            <form class="main__form" action="mailer/smart.php" method="POST">
+              <h4 id="header-form" class="main__form_title">Для получения <br> консультации оставьте свои <br> контактные данные</h4>
+              <label for="main__form_name-input" class="main__form_label">Ваше имя</label> 
+              <input class="main__form_input" type="text" id="main__form_name-input">
+              <label class="main__form_label" for="main__form_contact-input">Контактные данные</label> 
+              <input class="main__form_input" type="text" id="main__form_contact-input">
+              <label class="main__form_label" for="main__form_message-textarea">Сообщение</label> 
+              <textarea class="main__form_textarea" name="" id="main__form_message-textarea" cols="30" rows="5"></textarea>
+              <button class="main__form_btn">Отправить сообщение</button>
+            </form>
+          </div>
+   			</div>
+   		</div>
+   
+   </section>
+
+
+<!-- Подключаем mailer для формы первой секции -->
+
+  <script>
+   $('#header-form').submit(function(event) {
+     event.preventDefault();
+     $.ajax({
+       type: "POST",
+       url: "mailer/smart.php",
+       data: $(this).serialize()
+     }).done(function() {
+       $(this).find("input").val("");
+       alert("Спасибо за заявку. Наши сотрудники свяжутся с Вами в течении 5 минут");
+       $("#header-form").trigger("reset");
+     });
+     return false;
+   });
+    </script>
+   <section class="services">
+   	<div class="container">
+   		<div class="row">
+   			<div class="col-xl-8 offset-xl-2 col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-sm-12 offset-sm-0 col-xs-12 offset-xs-0">
+   				<h3 class="services__title">Услуги</h3>
+   			</div>
+   		</div>
+   		<div class="row">
+   			<div class="col-xl-4 offset-xl-0 col-lg-4 offset-lg-0 col-md-4 offset-md-0 col-sm-12 offset-sm-0 col-xs-12 offset-xs-0">
+   				<div class="services__block">
+   				<img src="img/services/01.jpg" alt="Лендинги">
+   			
+            <h4>Лендиндги</h4>
+            <p class="service__article">Лендинги предназначены для продажи одного товара. Как правило, покупателю предлагается выбор из нескольких комплектаций: эконом, стандарт, люкс. Грамотно оформление лендинга может увеличивать конверсию более чем в 5 раз.
+                      Буду рада взять на себя всю работу по созданию данного инструмента: дизайн, тексты, верстку, посадку на админ-панель при необходимости.</p>
+         
+   				<button class="main__form_btn service-popup-btn servies__btn">Подробнее о ценах, сроках...</button>
+   			</div>
+   			</div>
+   			<div class="col-xl-4 offset-xl-0 col-lg-4 offset-lg-0 col-md-4 offset-md-0 col-sm-12 offset-sm-0 col-xs-12 offset-xs-0">
+   				<div class="services__block">
+   				<img src="img/services/02.jpg" alt="Многостраничные сайты">
+   				
+            <h4>Сайт-визитка</h4>
+            <p class="service__article">Сайт-визитка - небольшой сайт, содержит в себе основную информацию компании. Главное предназначение - познакомить потенциального потребителя с компанией и завоевать доверие. Обычно сайт включает информацию о производимых товарах и услугах, контакты, отзывы. Имеет форму обратной связи. 
+            Осуществляю полный перечень работ по созданию визиток: от дизайна, текстов, кода до размещения на хостинге и посадки на CMS. </p>
+         
+   				<button class="main__form_btn service-popup-btn servies__btn">Подробнее о ценах, сроках...</button>
+   			</div>
+   			</div>
+   			<div class="col-xl-4 offset-xl-0 col-lg-4 offset-lg-0 col-md-4 offset-md-0 col-sm-12 offset-sm-0 col-xs-12 offset-xs-0">
+   				<div class="services__block">
+   				<img src="img/services/03.jpg" alt="Интернет-каталоги">
+   			
+            <h4>Интернет-магазины</h4>
+            <p class="service__article">Интернет-магазин- сайт, который позволяет совершать покупку из окна браузера пользователя. Посетитель на ресурсе знакомиться со всем ассортиментом товаров, выбирает понравившийся и не отходя от компьютера совершает покупку - переводит деньги, используя виртуальный способ оплаты. Затем покупатель выбирает способ доставки и, при необходимости, оставляет комментарий продавцу. </p>
+        
+   				<button class="main__form_btn service-popup-btn servies__btn">Подробнее о ценах, сроках...</button>
+   			</div>
+   			</div>
+   		</div>
+   	</div>
+   </section>
+
+   <!-- Модальное окно  -->
+
+<div class="service-popup"> <!-- Затемнение и определение области под модального окна -->
+  <div class="popup-dialog"> <!-- Само (белое) модальное окно -->
+    <div class="popup-content"> <!-- Содержимое модального окна -->
+    	<h3>Контент временно недоступен. Приношу извинения за неудобства</h3>
+      
+        <button class="popup-close">&times;</button>
+                   
+    </div>
+  </div>
+</div>
+
+<script>
+
+    $('.service-popup-btn').on('click', function(event) {
+    event.preventDefault();
+    $('.service-popup').fadeIn();
+    });
+  
+
+    $('.popup-close').on('click', function(event) {
+     event.preventDefault();
+     $('.service-popup').fadeOut();        
+     });
+    
+
+   </script>
+
+  <!--  Section about-me for desctops -->
+
+ <section class="about-me_adaptive">
+ 
+      <div class="row">
+        <div class="col-xl-8 ffset-lg-2 col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-sm-12 offset-sm-0 col-xs-12 offset-xs-0">
+          <h3 class="about-me_adaptive__title">Обо мне</h3>
+        </div>
+      </div>
+
+<!-- Закончился блок с заголовком секции
+ -->
+    <div class="row avatar-wrapper">
+       <div class="col-xl-3 offset-xl-0 col-lg-3 offset-lg-0 col-md-3 offset-md-0   col-sm-12 offset-sm-0 col-xs-12 offset-xs-0 about-me__avatar-photo-block">
+             <img class="about-me_adaptive__avatar" src="img/section-avatar.png" alt="Мое фото">
+      </div>
+    </div>
+
+    <!-- Закончилась строка с аватаром -->
+
+        <div class="row about-me__block">
+
+          <div class="col-xl-4 offset-xl-0 col-lg-4 offset-lg-0 col-md-4 offset-md-0 col-sm-12 offset-sm-0 col-xs-12 offset-xs-0 about-me__up-part">
+           <div class="important-wrapper">
+             <img class="about-me__image" src="img/icons/mortarboard.png" alt="Образование">
+            <h4 class="about-me_adaptive__subtitle">Образование</h4>
+            <p class="alternative-subtitle"><strong>Образование</strong></p>
+            <p><strong>
+                 У меня два высших образования.</strong> Одно в сфере экономики, второе - психологическое. Благодаря этому мне удается разрабатывать проекты для бизнеса учитывая все аспекты поведения потребителей.  </p>
+                 <br>
+                 <ul>
+                      <li>Российская международная академия туризма, 2009г. Экономист. Красный диплом.</li>
+                      <li>Московский университет им. С.Ю.Витте, 2018г. Психолог.</li>
+                    </ul>  
+                    <br> 
+                  <p><strong>Квалификацию в IT получила на курсах дополнительного образования.</strong></p>
+                  <br>
+                  <ul>
+                    <li>НОУ "Новая волнаю". Курс "Программирование". Обучалась 2 года. Оффлайн.</li>
+                    <li>Glo Academy. Курс "Веб-разработчик", курс "JQuery", курс "WordPress"</li>
+                    <li>DkaDevelop. Курс "JavaScript. Стандарт ES6"</li>
+                    <li>Типичный верстальщик. Курс "Создание сайтов", курс "SVG"</li>
+                    <li>Академия Максима Солдаткина. Курс "Веб-дизайн"</li>
+                    <li>А. Шуст. Курс "Текст, который продает"</li>
+                  </ul>
+                  <br>
+                 <p>Помимо представленных в списке обучений, я постоянно совершенствуюсь за счет бесплатных программ и уроков в смежных сферах: </p>
+                 <br>
+                 <ul>
+                  <li>Курсы Виталия Мечуковского по верстке и веб-дизайну</li>
+                  <li>Курсы А.Митрошиной по ведению Инстаграм</li>
+                  <li>Курсы Е. Иноземцевой по текстам для социальных сетей</li>
+                  <li>Обучение по маркетингу у М. Солодар</li>
+                  <li>Обучение в школе копирайтеров</li>
+                  <li>и др.</li>
+                 </ul>
+               
+           </div>
+          </div>
+        
+      <div class="col-xl-4 offset-xl-0 col-lg-4 offset-lg-0 col-md-4 offset-md-0 col-sm-12 offset-sm-0 col-xs-12 offset-xs-0 about-me__down-block-left-side">
+          <div class="important-wrapper middle-block">
+            <img class="about-me__image" src="img/icons/briefcase.png" alt="Опыт работы">
+            <h4 class="about-me_adaptive__subtitle">Технологии</h4>
+            <p class="alternative-subtitle"><strong>Технологии</strong></p>
+             <p>В работе я использую следующие технологии:</p>
+                      <br>
+                      <p><strong>Проект-менеджмент</strong></p>
+                    <br>
+                    <ul>
+                      <li>Trello</li>
+                      <li>Agile</li>
+                      <li>Scrum</li>
+                      <li>Git</li>
+                      <li>GitHub</li>
+                      <li>Мессенджеры (Skype, Whats App)</li>                   
+                    </ul>
+                    <br>
+                    <p><strong>Дизайн. Создание интерфейсов</strong></p>
+                    <br>
+                    <ul>
+                      <li>Photoshop</li>
+                      <li>Figma</li>
+                      <li>Illustrator</li>
+                      <li>XDisaign</li>
+                      <li>Avocade</li>                     
+                    </ul>
+                    <br>
+                    <p><strong>Веб-разработка</strong></p>
+                    <br>
+                    <ul>
+                      <li>HTML5</li>
+                      <li>CSS3 (Flexbox, Grid, Bootstrap)</li>
+                      <li>JavaScript(JQuery, JQuery IU)</li>
+                      <li>SCSS/LESS</li>
+                      <li>SVG/Canvas</li>
+                      <li>Gulp</li>
+                      <li>BEM-naming</li>
+                      <li>Visual Studio Code/ Atom / Sublime Text + Emmet </li>
+                      <li>CMS WordPress</li>                      
+                    </ul>
+          </div>
+
+        </div>
+
+        <div class="col-xl-4 offset-xl-0 col-lg-4 offset-lg-0 col-md-4 offset-md-0 col-sm-12 offset-sm-0 col-xs-12 offset-xs-0 about-me__block-right-side">
+        
+           <div class="important-wrapper edge-block"> <img class="about-me__image" src="img/icons/project-management.png" alt="Используемые технологии">
+                      <h4 class="about-me_adaptive__subtitle">Опыт работы</h4>
+            <p class="alternative-subtitle"><strong>Опыт работы</strong></p>
+            <p> Работаю в сфере продвижения услуг через интернет с 2013 года.</p>
+                      <br>
+                      <ul>
+                        <li><strong>Администрирования корпоративных сайтов и интернет-магазинов с июня 2013 года. </strong>Вот несколько ресурсов, с которыми работала:
+                  <ul>
+                    <br>
+                    <li>volen.ru</li>
+                    <li>df-rmat.ru</li>
+                    <li>magicgold.ru</li>
+                  </ul>
+                         </li>
+                        <br>
+
+                        <li><strong>Копирайтинг (написание текстов для сайтов и соц сетей) и создание веб-ресурсов на конструкторах (Wix, Tilda) с сентября 2016 года. </strong>Ресурсы, с которыми работала:
+                  <ul>
+                    <br>
+                    <li>Интернет-магазин детской одежды</li>
+                    <li>Строительная компания</li>
+                    <li>Курсы коуча по саморазвитию</li>
+                    <li>Портал о здоровом питании</li>
+                    <li>Сайт о материнстве</li>
+                    <li>Книжный магазин</li>
+                    <li>Блог психолога</li>
+                  </ul> 
+                </li>
+                      </ul>
+                      <br>
+                    <p><strong>Написание сайтов с использованием языков HTML, CSS, JS, PHP с октября 2018 года. </strong> В настоящий момент есть 12 ресурсов, над которыми я работала в соавторстве, 9 проектов, выполненных под руководством наставников и 6 сайтов созданных лично мной. Вот некоторые из самостоятельных работ:</p>  <br>
+                    <ul>
+                                        <li>slimmommy.ru</li>
+                                        <li>ermeleya.ru</li>
+                                        <li>ermolaevadeveloper.ru</li>
+                                       
+                                       </ul>      
+                          <br>
+                                       <p>Буду рада пополнить список сайтом, созданным для вас. </p>             
+                   </div>
+
+        </div>
+      </div> <!-- row с тремя инфо-блоками закончилась -->
+
+  
+
+
+      <div class="row about-me__block net-contact-block">
+        <div class="col-xl-6 offset-xl-6 col-lg-6 offset-lg-6 col-md-12 offset-md-0 col-sm-12 offset-sm-0">
+          <h5 class="about-me_adaptive__contact-title">Я в социальных сетях</h5>
+          <a href="https://vk.com/ermeleya" target="_blank"><img class="about-me_adaptive__image_contact" src="img/about-me-icons/vk.png" alt="Vkontakte"></a>
+          <a href="linkedin.com/in/elena-ermolaeva-b078aa185" target="_blank"><img class="about-me_adaptive__image_contact" src="img/about-me-icons/linkedin-logo.png" alt="Linkedin"></a>
+          <a href="https://www.instagram.com/ermeleya.codes" target="_blank"><img class="about-me_adaptive__image_contact" src="img/about-me-icons/instagram-logo.png" alt="Instagram"></a>
+        </div>
+      </div>
+
+ 
+   </section> 
+
+  <!--  Section about-me for sm-display -->
+
+   <section class="about-me">
+ <div class="container"> 
+   		<div class="row">
+   			<div class="col-lg-8 offset-lg-2">
+   				<h3 class="about-me__title">Обо мне</h3>
+   			</div>
+   		</div>
+
+   		<div class="about-me__up-wrap">
+        <div class="row about-me__block">
+          <div class="col-xl-9 offset-xl-0 col-lg-9 offset-lg-0 col-md-9 offset-md-0 col-sm-12 offset-sm-0 col-xs-12 offset-xs-0 about-me__up-part">
+            <img class="about-me__image" src="img/icons/mortarboard.png" alt="Образование">
+            <h4 class="about-me__subtitle">Образование</h4>
+            <p>
+                 У меня два высших образования. Одно в сфере экономики, второе - психологическое. Благодаря этому мне удается разрабатывать проекты для бизнеса учитывая все аспекты поведения потребителей.  </p>
+                 <br>
+                 <ul>
+                      <li>Российская международная академия туризма, 2009г. Экономист. Красный диплом.</li>
+                      <li>Московский университет им. С.Ю.Витте, 2018г. Психолог.</li>
+                    </ul>  
+                    <br> 
+                  <p>Квалификацию в IT получила на курсах дополнительного образования.</p>
+                  <br>
+                  <ul>
+                    <li><strong>НОУ "Новая волнаю".</strong> Курс "Программирование". Обучалась 2 года. Оффлайн.</li>
+                    <li><strong>Glo Academy. </strong>Курс "Веб-разработчик", курс "JQuery", курс "WordPress"</li>
+                    <li><strong>DkaDevelop. </strong>Курс "JavaScript. Стандарт ES6"</li>
+                    <li><strong>Типичный верстальщик.</strong> Курс "Создание сайтов", курс "SVG"</li>
+                    <li><strong>Академия Максима Солдаткина. </strong>Курс "Веб-дизайн"</li>
+                    <li><strong>А. Шуст.</strong> Курс "Текст, который продает"</li>
+                  </ul>
+                  <br>
+               
+          </div>
+        
+          <div class="col-xl-3 offset-xl-0 col-lg-3 offset-lg-0 col-md-3 offset-md-0 col-sm-12 offset-sm-0 col-xs-12 offset-xs-0 about-me__avatar-photo-block">
+            <img class="about-me__avatar" src="img/section-avatar.png" alt="Мое фото">
+          </div>
+        </div>
+        
+              <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 about-me__extra-article">
+                     <p>Помимо представленных в списке обучений, я постоянно совершенствуюсь за счет бесплатных программ и уроков в смежных сферах: курсы Виталия Мечуковского по верстке и веб-дизайну, курсы А.Митрошиной по ведению Инстаграм, курсы Е. Иноземцевой по текстам для социальных сетей и др. </p>
+                </div>
+              </div>
+      </div>
+
+   		<div class="row about-me__block">
+   			<div class="col-xl-5 offset-xl-0 col-lg-5 offset-lg-0 col-md-6 offset-md-0 col-sm-12 offset-sm-0 col-xs-12 offset-xs-0 about-me__down-block-left-side">
+   				<img class="about-me__image" src="img/icons/briefcase.png" alt="Опыт работы">
+   				<h4 class="about-me__subtitle">Опыт работы</h4>
+   				<p> Работаю в сфере продвижения услуг через интернет с 2013 года.</p>
+          <br>
+          <ul>
+            <li>Администрирования корпоративных сайтов и интернет-магазинов с июня 2013 года. </li>
+            <br>
+            <li>Копирайтинг (написание текстов для сайтов и соц сетей) и создание веб-ресурсов на конструкторах (Wix, Tilda) с сентября 2016 года </li>
+          </ul>
+          <br>
+        <p><strong>Написание сайтов с использованием языков HTML, CSS, JS, PHP с октября 2018 года. </strong></p>
+
+   			</div>
+
+   			<div class="col-xl-5 offset-xl-2 col-lg-5 offset-lg-2 col-md-6 offset-md-0 col-sm-12 offset-sm-0 col-xs-12 offset-xs-0 about-me__block-right-side">
+   			
+            <img class="about-me__image" src="img/icons/project-management.png" alt="Используемые технологии">
+          <h4 class="about-me__subtitle">Технологии</h4>
+          <p>В работе я использую следующие технологии:</p>
+          <br>
+          <p><strong>Проект-менеджмент</strong></p>
+                    <br>
+                    <ul>
+                      <li>Trello, Agile, Scrum, Git, GitHub, Мессенджеры (Skype, Whats App)</li>
+                    </ul>
+                    <br>
+                    <p><strong>Дизайн. Создание интерфейсов</strong></p>
+                    <br>
+                    <ul>
+                      <li>Figma, Photoshop, Illustrator, XDisaign</li>
+                    </ul>
+                    <br>
+                    <p><strong>Веб-разработка</strong></p>
+                    <br>
+                    <ul>
+                      <li>HTML5, CSS3 (Flexbox, Grid, Bootstrap), JavaScript(JQuery, JQuery IU), SCSS, LESS, SVG, Canvas, Gulp, BEM-naming, Sublime Text + Emmet (среда разработки), CMS WordPress</li>  
+                    </ul>
+       
+
+   			</div>
+   		</div>
+
+   		<div class="row about-me__block">
+   			<div class="col-xl-6 offset-xl-6 col-lg-6 offset-lg-6 col-md-12 offset-md-0 col-sm-12 offset-sm-0">
+   				<h5 class="about-me__contact-title">Я в социальных сетях</h5>
+   				<a href="https://vk.com/ermeleya" target="_blank"><img class="about-me__image_contact" src="img/about-me-icons/vk.png" alt="Vkontakte"></a>
+   				<a href="linkedin.com/in/elena-ermolaeva-b078aa185" target="_blank"><img class="about-me__image_contact" src="img/about-me-icons/linkedin-logo.png" alt="Linkedin"></a>
+   				<a href="https://www.instagram.com/ermeleya.codes" target="_blank"><img class="about-me__image_contact" src="img/about-me-icons/instagram-logo.png" alt="Instagram"></a>
+   			</div>
+   		</div>
+
+   </div> 
+   </section>
+
+<section class="extra">
+	
+		<div class="row">
+			<div class="col-xl-8 offset-xl-2 col-lg-8 offset-2 col-md-10 offset-md-1 col-sm-12 offset-sm-0 col-xs-12 ofset-xs-0">
+				<h3 class="services__title">Дополнительные услуги</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xl-6 offset-xl-6 col-lg-6 offset-lg-6 col-md-6 offset-md-6 col-sm-10 offset-sm-1 col-xs-12 offset-xs-0 extra-content">
+		
+          <p>Помимо создания сайтов под ключ с нуля буду рада помочь и с отдельными этапами работы над веб-ресурсом</p>
+        <ul>
+         <li><a class="extra__text-link" href="#">Создание контент-плана и его реализация для новостной ленты сайта</a></li> <br>
+         <li><a class="extra__text-link" href="#">Разработка дизайна интерфейса</a></li>  <br>
+          <li><a class="extra__text-link" href="#">Наполнение статьями существующий сайт</a></li>  <br>
+          <li><a class="extra__text-link" href="#">Изменение внешнего вида или добавление нового функционала на уже существующий сайта</a></li> <br>
+               <li><a class="extra__text-link" href="#">Администрирование сайта: подготовка и размещение новостей, обработка баз данных, работа с комментариями, заявками, рассылкой.</a> </li> <br>
+                <li><a class="extra__text-link" href="#">Создание сайтов без использования кода на конструкторе Tilda</a></li>
+        </ul>
+                <p>Чтобы прочесть подробную информацию об условиях оказания услуги - кликните на ее название.</p>
+        <div class="extra__wrap">
+          <button class="main__form_btn extra-btn popup-btn">Оставить заявку</button>
+        </div>
+    
+			</div>
+		</div>
+
+</section>
+
+<!-- Модальное окно  -->
+
+<div class="popup"> <!-- Затемнение и определение области под модального окна -->
+  <div class="popup-dialog"> <!-- Само (белое) модальное окно -->
+    <div class="popup-content"> <!-- Содержимое модального окна -->
+      <div class="popup-form">
+       <form action="mailer_consalt/smart.php" id="modal-header-form" method="POST">
+        <button class="popup-close">&times;</button>
+                    <h3 class="popup-header">Заявка</h3>
+                    <p class="popup-subtitle">Оставьте краткое описание <br> задания и свои контактные <br>данные для связи</p>
+                    <p class="popup-label">Ваше имя</p>
+                    <input class="popup-input" name="user_name" required type="text"> <br>
+                    <p class="popup-label">Контактные данные</p>
+                    <input class="popup-input" name="user_phone" id="modal-form-phone" required type="text"> <br>
+                    <p class="popup-label">Сообщение</p>
+                    <textarea rows="5" class="popup-textarea" name="user_message"></textarea><br>
+                    <button class="main__form_btn" type="submit">Оставьте заявку</button>
+                   
+       </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+    $('.popup-btn').on('click', function(event) {
+    event.preventDefault();
+    $('.popup').fadeIn();
+    });
+  
+
+    $('.popup-close').on('click', function(event) {
+     event.preventDefault();
+     $('.popup').fadeOut();        
+     });
+    
+
+   </script>
+
+
+<section class="contacts">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h3 class="services__title">Контакты</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xl-6 offset-xl-0 col-lg-6 offset-lg-0 col-md-6 offset-md-0 col-sm-12 offset-sm-0 col-xs-12 offset-xs-0">
+				<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A1426b0d392a4f1a42294b612496cbae9911e1e230b34f144def252c3b400b544&amp;width=100%25&amp;height=300&amp;lang=ru_RU&amp;scroll=false"></script>
+				<p class="feedback__subtitle_finish contacts__label-text">Оставьте свое сообщение для меня в форме справа или свяжитесь со мной по  указанным контактным данным</p>
+				<div class="footer__contact-links">
+					<a href="mailto:ermolaeva-developer@gmail.com">
+						<img class="footer__contact-links-image" src="img/footer-links/email01.png" alt="Email">
+						<p class="footer__contact-links-text">ermolaeva-developer@gmail.com</p>
+					</a> 
+					<a href="https://vk.com/ermeleya" target="_blank">
+						<img class="footer__contact-links-image" src="img/footer-links/vk01.png" alt="VK">
+						<p class="footer__contact-links-text">Elena Ermolaeva</p>
+					</a> 
+					<a class="footer__contact-links-text-link" href="tel:+7 (968) 785 38 22">
+						<img 
+					class="footer__contact-links-image"	src="img/footer-links/phone01.png" alt="Phone">
+						<p class="footer__contact-links-text">8(968)785-38-22</p>
+					</a>
+				</div>
+			</div>
+			<div class="col-xl-4 offset-xl-1 col-lg-4 offset-lg-1 col-md-5 offset-md-0 col-sm-12 offset-sm-0 col-xs-12 offset-xs-0">
+				<form class="contacts__order-form" action="#">
+					<h4>Заказать сайт</h4>
+					<label for="contacts__order-form-name">Ваше имя</label> 
+					<input id="contacts__order-form-name" type="text"> <br>
+					<label for="contacts__order-form-contact-data">Контактные данные</label> 
+					<input id="contacts__order-form-contact-data" type="text"> <br>
+					<label for="contacts__order-form-message">Сообщение</label>
+					<textarea id="contacts__order-form-message" name="" id="" cols="30" rows="5"></textarea>
+					<button class="main__form_btn">Отправить сообщение</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="footer">
+	<!-- <div class="container"> -->
+		<div class="row">
+			<div class="col-xl-4 offset-xl-0 col-lg-4 offset-lg-0 col-md-4 offset-md-0 col-sm-10 offset-sm-1 col-xs-12 offset-sx-0">
+				<img class="main-avatar" src="img/avatar.png" alt="Аватар">
+   				<h3 class="main-logo">Ермолаева Елена. <br> Веб-разработчик</h3>
+			</div>
+			<div class="col-xl-4 offset-xl-0 col-lg-4 offset-lg-0 col-md-4 offset-md-0 col-sm-10 offset-sm-1 col-xs-12 offset-sx-0">
+				<div class="footer-wrap">
+				<a href="extra-pages/pers-data.html" target="_blank"><p>Конфиденциальность</p></a>
+				<a href="extra-pages/pers-data.html" target="_blank"><p>Пользовательское соглашение</p></a>
+				</div>
+			</div>
+			<div class="col-xl-4 offset-xl-0 col-lg-4 offset-lg-0 col-md-4 offset-md-0 col-sm-10 offset-sm-1 col-xs-12 offset-sx-0">
+				<div class="footer-icon-wrap">
+				<a href="mailto:ermolaeva-developer@gmail.com"><img class="footer-icon" src="img/footer-links/email.png" alt="Email" title="Email"></a>
+				<a href="https://vk.com/ermeleya" target="_blank"><img class="footer-icon" src="img/footer-links/vk.png" alt="VK" title="VK"></a>
+				<a href="tel:+7 (968) 785 38 22"><img class="footer-icon" src="img/footer-links/phone.png" alt="Phone" title="Phone"></a>
+				<a href="linkedin.com/in/elena-ermolaeva-b078aa185" target="_blank"><img class="footer-icon" src="img/footer-links/linkedin-logo.png" alt="Linkedin" title="Linkedin"></a>
+				<a href="https://www.instagram.com/ermeleya.codes" target="_blank"><img class="footer-icon" src="img/footer-links/instagram-logo.png" alt="Instagram" title="Instagram"></a>
+				<a href="https://github.com/Ermeleya" target="_blank"><img class="footer-icon" src="img/footer-links/github-sign.png" alt="GitHub" title="GitHub"></a>
+				</div>
+			</div>
+		</div>
+	<!-- </div> -->
+</footer>
+
+</body>
+</html>

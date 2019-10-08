@@ -1,0 +1,13 @@
+.extra__list-point {
+  width: 1.5vw;
+  height: 1.5vw;
+  margin-right: 1.1vw;
+}
+.extra ul {
+  margin-top: 3vw;
+  list-style: none;
+}
+.extra li {
+  display: inline-block;
+  margin-bottom: 1vw;
+}
